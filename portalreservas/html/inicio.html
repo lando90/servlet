@@ -1,0 +1,50 @@
+<html>
+<head>
+	<title>SopraHotel Resort</title>
+	<link rel="stylesheet" type="text/css" href="../css/index.css">
+	<script type="text/javascript" src="../js/funciones.js">
+		
+	</script>
+</head>
+	<body>
+		
+		<section class="cuerpo" >
+		
+			<section class="botones" id="botones">
+					<input type="button" class="boton azul" id="boton_login" onclick="mostrarlogin()" value="LOGIN">
+					<input type="button" class="boton verde" id="boton_signup" onclick="mostrarsignup()" value="SIGN IN">
+					<h1>SOPRA STERIA RESORT</h1>
+			</section>
+			<div class="login" id="login" style="display: none;">
+				<h2>LOGIN</h2>
+  				<form class="loginform"  action="/portalreservas/miweb/" method="post">
+						<label for="user">USUARIO: </label><input type="text" name="user" id="user">
+						<label for="password">CONTRASE&Ntilde;A:</label><input type="password" name="password" id="password">
+						<input type="text" id="opcion" name="opcion" value="1" class="opcion">
+						<input type="submit" name="entrar" value="ENTRAR" class="submit" onclick="location='/portalreservas/miweb/'">
+  				</form> 
+  			</div>
+  			<div id="signup" class="signup" style="display:none;" >
+  				<h2>SIGN UP</h2>
+  				<form class="signupform"  action="/portalreservas/miweb/" method="post">
+					<label for="nombre">NOMBRE:</label><input type="text" name="nombre" id="nombre" required>
+					<label for="apellidos">APELLIDOS:</label><input type="text" name="apellidos" id="apellidos" required>
+					<label for="dni">DNI:</label><input type="text" name="dni" id="dni" required>
+					<label for="email">EMAIL:</label><input type="text" name="email" id="email" required>
+					<label for="direccion">DIRECCION:</label><input type="text" name="direccion" id="direccion" required>
+					<label for="codigopostal">CODIGO POSTAL:</label><input type="number" name="codigo_postal" id="codigopostal" required>
+					<label for="password">CONTRASE&Ntilde;A:</label><input type="password" name="password1" id="password1" required>
+					<label for="ciudad">CIUDAD:</label><input type="text" name="ciudad" id="ciudad" required>
+					<input type="text" id="opcion" name="opcion" value="2" class="opcion">
+					<input type="submit" name="registrarse" value="REGISTRARSE" class="submit" onclick="location='/portalreservas/miweb/'">
+					
+  				</form> 
+  			</div>	
+		</section>
+		<footer>
+			<hr>
+			<p>@copyright Jorge Jimenez, Abril 2017</p>
+		</footer>
+
+	</body>
+</html>

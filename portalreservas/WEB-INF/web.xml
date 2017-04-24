@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE web-app
+	PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+	"http://java.sun.com/dtd/web-app_2_3.dtd"> 
+	
+<web-app>
+	<display-name>Portal Turismo</display-name>
+	<description>Portal Turismo</description>
+	
+	<servlet>
+		<servlet-name>Frontal</servlet-name>
+		<servlet-class>servlet.ServletFrontal</servlet-class>
+		<init-param>
+			<param-name>cadenaConex</param-name>
+			<param-value>jdbc:mysql://localhost:3306/proyectohotel?user=root&amp;password=root</param-value>
+		</init-param>
+		<init-param>
+			<param-name>driver</param-name>
+			<param-value>com.mysql.jdbc.Driver</param-value>
+		</init-param>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>Previo</servlet-name>
+		<servlet-class>servlet.ServletPrevio</servlet-class>
+		<init-param>
+		<param-name>cadenaConex</param-name>
+		<param-value>jdbc:mysql://localhost:3306/proyectohotel?user=root&amp;password=root</param-value>
+		</init-param>
+		<init-param>
+		<param-name>driver</param-name>
+		<param-value>com.mysql.jdbc.Driver</param-value>
+		</init-param>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>Admin</servlet-name>
+		<servlet-class>servlet.ServletAdmin</servlet-class>
+		<init-param>
+		<param-name>cadenaConex</param-name>
+		<param-value>jdbc:mysql://localhost:3306/proyectohotel?user=root&amp;password=root</param-value>
+		</init-param>
+		<init-param>
+		<param-name>driver</param-name>
+		<param-value>com.mysql.jdbc.Driver</param-value>
+		</init-param>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>Reservas</servlet-name>
+		<servlet-class>servlet.ServletReserva</servlet-class>
+		<init-param>
+		<param-name>cadenaConex</param-name>
+		<param-value>jdbc:mysql://localhost:3306/proyectohotel?user=root&amp;password=root</param-value>
+		</init-param>
+		<init-param>
+		<param-name>driver</param-name>
+		<param-value>com.mysql.jdbc.Driver</param-value>
+		</init-param>
+	</servlet>
+	<servlet>
+		<servlet-name>Facturas</servlet-name>
+		<servlet-class>servlet.ServletFactura</servlet-class>
+		<init-param>
+		<param-name>cadenaConex</param-name>
+		<param-value>jdbc:mysql://localhost:3306/proyectohotel?user=root&amp;password=root</param-value>
+		</init-param>
+		<init-param>
+		<param-name>driver</param-name>
+		<param-value>com.mysql.jdbc.Driver</param-value>
+		</init-param>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>Previo</servlet-name>
+		<url-pattern>/miweb/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>Frontal</servlet-name>
+		<url-pattern>/miwebfrontal/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>Admin</servlet-name>
+		<url-pattern>/paneladmin/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>Reservas</servlet-name>
+		<url-pattern>/miwebreservas/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Facturas</servlet-name>
+		<url-pattern>/miwebfacturas/*</url-pattern>
+	</servlet-mapping>
+
+	<welcome-file-list>
+	<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+	
+	</web-app>
